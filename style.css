@@ -1,0 +1,132 @@
+/* GENERAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #111;
+    text-align: center;
+}
+
+.section-title.light {
+    color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #000000 60%, #ff6600);
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.hero h1 {
+    font-size: 54px;
+    color: #fff;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.hero span {
+    color: #ff6600;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #eee;
+    max-width: 450px;
+}
+
+.cta-btn {
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #e55a00;
+}
+
+/* SERVICES */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.service-card {
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border-left: 5px solid #ff6600;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+}
+
+/* ABOUT */
+.dark-bg {
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+.contact-box {
+    background: #f2f2f2;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
