@@ -8,14 +8,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background: #ffffff;
+    background: #000;       /* to blend with hero */
     color: #111;
-    padding-top: 90px; /* space for fixed header */
+    padding-top: 90px;      /* space for fixed header */
 }
 
 section {
     padding: 80px 10%;
-    scroll-margin-top: 100px; /* so anchors aren't hidden under header */
+    scroll-margin-top: 100px; /* so anchors aren't hidden behind header */
 }
 
 .section-title {
@@ -71,20 +71,19 @@ section {
 /* HAMBURGER BUTTON (MOBILE) */
 
 .nav-toggle {
-    display: none;  /* hidden on desktop */
-    width: 32px;
-    height: 32px;
-    border: none;
+    display: none;                 /* hidden on desktop */
     background: transparent;
+    border: none;
+    padding: 0;
     cursor: pointer;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 4px 0;
+    gap: 4px;
 }
 
 .nav-toggle span {
     display: block;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     border-radius: 2px;
     background: #ffffff;
 }
@@ -216,6 +215,8 @@ section {
     /* show hamburger, hide inline menu initially */
     .nav-toggle {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .main-nav {
