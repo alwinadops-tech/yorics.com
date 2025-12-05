@@ -1,4 +1,4 @@
-/* GLOBAL & BASE ------------------------------------ */
+/* GLOBAL ---------------------------------------- */
 
 html {
     scroll-behavior: smooth;
@@ -15,7 +15,7 @@ body {
 
 section {
     padding: 80px 10%;
-    scroll-margin-top: 100px; /* Prevents header from covering section titles */
+    scroll-margin-top: 100px; /* so anchors aren't hidden under header */
 }
 
 .section-title {
@@ -25,7 +25,7 @@ section {
     text-align: center;
 }
 
-/* HEADER & NAV ------------------------------------ */
+/* HEADER + NAV ---------------------------------- */
 
 .site-header {
     background: #000;
@@ -49,7 +49,12 @@ section {
     width: auto;
 }
 
-/* TOP MENU */
+/* DESKTOP NAV */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
 
 .main-nav a {
     color: #ffffff;
@@ -63,7 +68,28 @@ section {
     color: #ff6600;
 }
 
-/* HERO SECTION ------------------------------------ */
+/* HAMBURGER BUTTON (MOBILE) */
+
+.nav-toggle {
+    display: none;  /* hidden on desktop */
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: #ffffff;
+}
+
+/* HERO ----------------------------------------- */
 
 .hero {
     height: 100vh;
@@ -99,7 +125,7 @@ section {
     display: inline-block;
 }
 
-/* SERVICES ---------------------------------------- */
+/* SERVICES ------------------------------------- */
 
 .services-grid {
     display: grid;
@@ -114,7 +140,7 @@ section {
     border-radius: 12px;
 }
 
-/* ABOUT ------------------------------------------- */
+/* ABOUT ---------------------------------------- */
 
 .dark-bg {
     background: #000;
@@ -129,7 +155,7 @@ section {
     line-height: 1.6;
 }
 
-/* CONTACT ----------------------------------------- */
+/* CONTACT -------------------------------------- */
 
 .contact-box {
     background: #f2f2f2;
@@ -139,7 +165,7 @@ section {
     margin: auto;
 }
 
-/* FOOTER ------------------------------------------ */
+/* FOOTER --------------------------------------- */
 
 .footer {
     background: #111;
@@ -149,7 +175,7 @@ section {
     margin-top: 50px;
 }
 
-/* SOCIAL ICONS INSIDE FOOTER ---------------------- */
+/* SOCIAL ICONS -------------------------------- */
 
 .social-icons {
     margin-bottom: 20px;
@@ -172,7 +198,7 @@ section {
     transform: scale(1.1);
 }
 
-/* SIMPLE RESPONSIVE TWEAKS ------------------------ */
+/* RESPONSIVE (MOBILE NAV) --------------------- */
 
 @media (max-width: 768px) {
     .hero {
@@ -187,13 +213,29 @@ section {
         font-size: 16px;
     }
 
-    .header-inner {
-        flex-direction: row;
+    /* show hamburger, hide inline menu initially */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 10%;
+        background: #000;
+        padding: 12px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        display: none;  /* hidden until toggled */
+    }
+
+    .main-nav.nav-open {
+        display: flex;
     }
 
     .main-nav a {
-        margin-left: 16px;
-        font-size: 14px;
+        margin-left: 0;
+        font-size: 15px;
     }
 }
-
