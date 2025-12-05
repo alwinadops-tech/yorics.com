@@ -1,4 +1,6 @@
-/* GENERAL */
+/* ----------------------------
+   GLOBAL STYLES
+----------------------------- */
 body {
     margin: 0;
     padding: 0;
@@ -23,55 +25,55 @@ section {
     color: #fff;
 }
 
-/* ================================
+/* ----------------------------
    HEADER + LOGO
-================================ */
+----------------------------- */
 .site-header {
-    position: relative;
-    overflow: visible;
+    width: 100%;
+    background: #000;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 .header-inner {
-    position: absolute;
-    top: 20px;
-    left: 10%;
-    z-index: 50;
     display: flex;
     align-items: center;
 }
 
 .logo {
-    height: 60px;
+    height: 55px;          /* <<< FIX: Adjust logo size */
     width: auto;
-    display: block;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.18));
 }
 
-.logo-link {
-    display: inline-block;
+/* Add spacing so the hero is not blocked by fixed header */
+body {
+    padding-top: 100px;
 }
 
-/* ================================
+/* ----------------------------
    HERO SECTION
-================================ */
+----------------------------- */
 .hero {
     height: 100vh;
     background: linear-gradient(to right, #000000 60%, #ff6600);
     display: flex;
     align-items: center;
     padding-left: 10%;
-    position: relative;
-    z-index: 10;
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 54px;
     color: #fff;
     font-weight: 900;
     line-height: 1.1;
 }
 
-.hero span {
+.hero-content span {
     color: #ff6600;
 }
 
@@ -98,9 +100,9 @@ section {
     background: #e55a00;
 }
 
-/* ================================
+/* ----------------------------
    SERVICES
-================================ */
+----------------------------- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -120,9 +122,9 @@ section {
     background: #fff;
 }
 
-/* ================================
+/* ----------------------------
    ABOUT SECTION
-================================ */
+----------------------------- */
 .dark-bg {
     background: #000;
     color: #fff;
@@ -136,9 +138,9 @@ section {
     line-height: 1.6;
 }
 
-/* ================================
-   CONTACT BOX
-================================ */
+/* ----------------------------
+   CONTACT SECTION
+----------------------------- */
 .contact-box {
     background: #f2f2f2;
     padding: 25px;
@@ -149,9 +151,9 @@ section {
     font-size: 18px;
 }
 
-/* ================================
+/* ----------------------------
    FOOTER
-================================ */
+----------------------------- */
 .footer {
     background: #111;
     color: #fff;
@@ -169,42 +171,4 @@ section {
 
 .social-icons img:hover {
     opacity: 1;
-}
-
-/* ================================
-   MOBILE RESPONSIVE
-================================ */
-@media (max-width: 780px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding-left: 0;
-        padding-top: 160px;
-    }
-
-    .header-inner {
-        left: 5%;
-        top: 14px;
-    }
-
-    .logo {
-        height: 46px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-        max-width: 300px;
-        margin: auto;
-    }
-
-    .cta-btn {
-        margin-top: 18px;
-        padding: 12px 26px;
-        font-size: 16px;
-    }
 }
