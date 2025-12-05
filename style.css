@@ -164,6 +164,94 @@ section {
     max-width: 500px;
     margin: auto;
 }
+/* CONTACT GRID (DETAILS + FORM SIDE BY SIDE) */
+
+.contact-section {
+    background: #fff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-details .contact-box {
+    margin: 0;              /* remove auto-centering */
+}
+
+/* CONTACT FORM STYLES */
+
+.contact-form-card {
+    background: #f8f8f8;
+    padding: 25px 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.contact-form-card h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.form-row {
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    border-color: #ff6600;
+}
+
+/* FORM BUTTON */
+
+.form-btn {
+    margin-top: 6px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background: #e95b00;
+}
+
+/* MOBILE TWEAKS */
+
+@media (max-width: 768px) {
+    .contact-box,
+    .contact-form-card {
+        max-width: 100%;
+    }
+}
 
 /* FOOTER --------------------------------------- */
 
@@ -246,3 +334,4 @@ section {
         font-size: 15px;
     }
 }
+
