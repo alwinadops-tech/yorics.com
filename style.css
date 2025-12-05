@@ -1,4 +1,9 @@
-/* GENERAL */
+/* GLOBAL & BASE ------------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,24 +12,10 @@ body {
     color: #111;
     padding-top: 90px; /* space for fixed header */
 }
-/* FIXED HEADER */
-.site-header {
-    background: #000;
-    padding: 15px 10%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.logo {
-    height: 55px;   /* control logo size */
-    width: auto;
-}
 
 section {
     padding: 80px 10%;
+    scroll-margin-top: 100px; /* so anchors are not hidden behind header */
 }
 
 .section-title {
@@ -34,7 +25,8 @@ section {
     text-align: center;
 }
 
-/* FIXED HEADER */
+/* HEADER & NAV ------------------------------------ */
+
 .site-header {
     background: #000;
     padding: 15px 10%;
@@ -43,22 +35,36 @@ section {
     left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: none;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     height: 55px;
-}
-/* Remove unwanted white line under header */
-.site-header {
-    border-bottom: none !important;
+    width: auto;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* TOP MENU */
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-/* HERO */
+.main-nav a:hover {
+    color: #ff6600;
+}
+
+/* HERO SECTION ------------------------------------ */
+
 .hero {
     height: 100vh;
     background: linear-gradient(to right, #000 60%, #ff6600);
@@ -93,7 +99,8 @@ body {
     display: inline-block;
 }
 
-/* SERVICES */
+/* SERVICES ---------------------------------------- */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -107,14 +114,23 @@ body {
     border-radius: 12px;
 }
 
-/* ABOUT */
+/* ABOUT ------------------------------------------- */
+
 .dark-bg {
     background: #000;
     color: #fff;
     text-align: center;
 }
 
-/* CONTACT */
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* CONTACT ----------------------------------------- */
+
 .contact-box {
     background: #f2f2f2;
     padding: 20px;
@@ -123,7 +139,8 @@ body {
     margin: auto;
 }
 
-/* FOOTER */
+/* FOOTER ------------------------------------------ */
+
 .footer {
     background: #111;
     color: #fff;
@@ -131,7 +148,9 @@ body {
     padding: 30px;
     margin-top: 50px;
 }
-/* SOCIAL ICONS INSIDE FOOTER */
+
+/* SOCIAL ICONS INSIDE FOOTER ---------------------- */
+
 .social-icons {
     margin-bottom: 20px;
 }
@@ -148,12 +167,32 @@ body {
     transition: 0.3s ease;
 }
 
-
 .social-icons img:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
+/* SIMPLE RESPONSIVE TWEAKS ------------------------ */
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 8%;
+    }
 
+    .hero h1 {
+        font-size: 38px;
+    }
 
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .header-inner {
+        flex-direction: row;
+    }
+
+    .main-nav a {
+        margin-left: 16px;
+        font-size: 14px;
+    }
+}
