@@ -131,5 +131,28 @@ body {
     padding: 30px;
     margin-top: 50px;
 }
+/* SOCIAL ICONS INSIDE FOOTER */
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    filter: invert(1); /* makes icons white */
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 
 
