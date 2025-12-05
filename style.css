@@ -48,6 +48,15 @@ section {
 .logo {
     height: 55px;
 }
+/* Remove unwanted white line under header */
+.site-header {
+    border-bottom: none !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 /* HERO */
 .hero {
@@ -122,4 +131,5 @@ section {
     padding: 30px;
     margin-top: 50px;
 }
+
 
