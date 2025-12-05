@@ -79,22 +79,59 @@
     </section>
 
     <!-- CONTACT -->
-   <section id="contact" class="section">
+   <section id="contact" class="section contact-section">
     <h2 class="section-title">Contact Us</h2>
-    <div class="contact-box">
-        <p><strong>Email:</strong> <a href="mailto:alwin@yorics.com">alwin@yorics.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+447649754867">+44 7649 754 867</a></p>
 
-        <p><strong>Registered Office:</strong></p>
-        <p>
-            VI/2004, 1st Floor, Mundamttom Tower,<br>
-            Thodupuzha P.O, Idukki,<br>
-            Kerala - 685608, India
-        </p>
+    <div class="contact-grid">
 
-        <p><strong>Company Name:</strong> YORICS INDIA PRIVATE LIMITED</p>
+        <!-- LEFT: CONTACT DETAILS -->
+        <div class="contact-details">
+            <div class="contact-box">
+                <p><strong>Email:</strong> <a href="mailto:alwin@yorics.com">alwin@yorics.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+447649754867">+44 7649 754 867</a></p>
+
+                <p><strong>Registered Office:</strong></p>
+                <p>
+                    VI/2004, 1st Floor, Mundamttom Tower,<br>
+                    Thodupuzha P.O, Idukki,<br>
+                    Kerala - 685608, India
+                </p>
+
+                <p><strong>Company Name:</strong> YORICS INDIA PRIVATE LIMITED</p>
+            </div>
+        </div>
+
+        <!-- RIGHT: CONTACT FORM -->
+        <div class="contact-form-card">
+            <h3>Send us a message</h3>
+            <form action="mailto:alwin@yorics.com" method="POST" enctype="text/plain">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="Name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="Phone">
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="Message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="form-btn">Send Message</button>
+            </form>
+        </div>
+
     </div>
 </section>
+
 
 
     <!-- FOOTER -->
@@ -133,6 +170,7 @@
 
 </body>
 </html>
+
 
 
 
