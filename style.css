@@ -7,6 +7,21 @@ body {
     color: #111;
     padding-top: 90px; /* space for fixed header */
 }
+/* FIXED HEADER */
+.site-header {
+    background: #000;
+    padding: 15px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 55px;   /* control logo size */
+    width: auto;
+}
 
 section {
     padding: 80px 10%;
@@ -107,3 +122,4 @@ section {
     padding: 30px;
     margin-top: 50px;
 }
+
