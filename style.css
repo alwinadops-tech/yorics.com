@@ -144,15 +144,16 @@ body {
 .social-icons img {
     width: 32px;
     height: 32px;
-    filter: invert(1); /* makes icons white */
     opacity: 0.85;
     transition: 0.3s ease;
 }
+
 
 .social-icons img:hover {
     opacity: 1;
     transform: scale(1.1);
 }
+
 
 
 
