@@ -15,7 +15,7 @@ body {
 
 section {
     padding: 80px 10%;
-    scroll-margin-top: 100px; /* so anchors are not hidden behind header */
+    scroll-margin-top: 100px; /* Prevents header from covering section titles */
 }
 
 .section-title {
@@ -196,3 +196,4 @@ section {
         font-size: 14px;
     }
 }
+
