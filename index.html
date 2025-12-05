@@ -122,9 +122,19 @@
     <p>© 2025 Yorics India Private Limited. All rights reserved.</p>
 </footer>
 
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  navToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('nav-open');
+    navToggle.classList.toggle('nav-open');
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
